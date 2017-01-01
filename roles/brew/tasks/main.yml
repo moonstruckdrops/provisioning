@@ -1,0 +1,20 @@
+---
+- name: tap external repositories
+  become: false
+  homebrew_tap:
+    tap: "{{ item }}"
+    state: present
+  with_items: "{{ repositories }}"
+
+- name: update homebrew
+  become: false
+  homebrew:
+    update_homebrew: yes
+
+- name: install packages
+  become: false
+  homebrew:
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default('latest') }}"
+    install_options: "{{ item.option | default('') }}"
+  with_items: "{{ packages }}"

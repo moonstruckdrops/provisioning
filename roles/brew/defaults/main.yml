@@ -1,0 +1,75 @@
+---
+repositories:
+  - caskroom/cask
+  - homebrew/versions
+  - homebrew/binary
+  - homebrew/completions
+  - homebrew/fuse
+  - mackerelio/mackerel-agent
+
+packages:
+  - { name: cask, state: 'latest', option: '' }
+  - { name: bash, state: 'latest', option: '' }
+  - { name: bash-completion, state: 'latest', option: '' }
+  - { name: fish, state: 'latest', option: '' }
+  - { name: git, state: 'latest', option: '' }
+  - { name: git-ftp, state: 'latest', option: '' }
+  - { name: gibo, state: 'latest', option: '' }
+  - { name: tig, state: 'latest', option: '' }
+  - { name: subversion, state: 'latest', option: '' }
+  - { name: emacs, state: 'latest', option: '--srgb --with-gnutls' }
+  - { name: rbenv, state: 'latest', option: '' }
+  - { name: ruby-build, state: 'latest', option: '--with-openssl' }
+  - { name: rbenv-binstubs, state: 'latest', option: '' }
+  - { name: go, state: 'latest', option: '--cross-compile-all' }
+  - { name: nodebrew, state: 'latest', option: '' }
+  - { name: lua, state: 'latest', option: '' }
+  - { name: bundler-completion, state: 'latest', option: '' }
+  - { name: gem-completion, state: 'latest', option: '' }
+  - { name: rake-completion, state: 'latest', option: '' }
+  - { name: rails-completion, state: 'latest', option: '' }
+  - { name: kitchen-completion, state: 'latest', option: '' }
+  - { name: vagrant-completion, state: 'latest', option: '' }
+  - { name: packer-completion, state: 'latest', option: '' }
+  - { name: maven-completion, state: 'latest', option: '' }
+  - { name: spring-completion, state: 'latest', option: '' }
+  - { name: coreutils, state: 'latest', option: '' }
+  - { name: source-highlight, state: 'latest', option: '' }
+  - { name: tree, state: 'latest', option: '' }
+  - { name: ag, state: 'latest', option: '' }
+  - { name: jq, state: 'latest', option: '' }
+  - { name: pigz, state: 'latest', option: '' }
+  - { name: mosh, state: 'latest', option: '' }
+  - { name: tmux, state: 'latest', option: '' }
+  - { name: nkf, state: 'latest', option: '' }
+  - { name: wget, state: 'latest', option: '' }
+  - { name: swftools, state: 'latest', option: '' }
+  - { name: gist, state: 'latest', option: '' }
+  - { name: smartmontools, state: 'latest', option: '' }
+  - { name: jmeter, state: 'latest', option: '' }
+  - { name: mackerel-agent, state: 'latest', option: '' }
+  - { name: the_silver_searcher, state: 'latest', option: '' }
+  - { name: corkscrew, state: 'latest', option: '' }
+  - { name: md5sha1sum, state: 'latest', option: '' }
+  - { name: pv, state: 'latest', option: '' }
+  - { name: imagemagick, state: 'latest', option: '' }
+  - { name: peco, state: 'latest', option: '' }
+  - { name: percol, state: 'latest', option: '' }
+  - { name: docker, state: 'latest', option: '--without-completions' }
+  - { name: boot2docker, state: 'latest', option: '' }
+  - { name: mysql56, state: 'latest', option: '--with-blackhole-storage-engine' }
+  - { name: mysql-connector-c++, state: 'latest', option: '' }
+  - { name: percona-server, state: 'latest', option: '' }
+  - { name: percona-toolkit, state: 'latest', option: '' }
+  - { name: sqlite, state: 'latest', option: '' }
+  - { name: postgresql, state: 'latest', option: '' }
+  - { name: tomcat, state: 'latest', option: '' }
+  - { name: ant, state: 'latest', option: '' }
+  - { name: ivy, state: 'latest', option: '' }
+  - { name: maven, state: 'latest', option: '' }
+  - { name: solr, state: 'latest', option: '' }
+  - { name: elasticsearch, state: 'latest', option: '' }
+  - { name: groovyserv, state: 'latest', option: '' }
+  - { name: android-sdk, state: 'latest', option: '' }
+  - { name: awscli, state: 'latest', option: '' }
+  - { name: heroku-toolbelt, state: 'latest', option: '' }

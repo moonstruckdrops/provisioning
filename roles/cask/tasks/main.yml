@@ -1,0 +1,7 @@
+---
+- name: install packages
+  become: no
+  homebrew_cask:
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default('present') }}"
+  with_items: "packages"

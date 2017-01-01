@@ -1,0 +1,8 @@
+---
+- name: OSX Provisioner
+  hosts: local
+  become: false
+  roles:
+    - brew
+    - cask
+    - mas

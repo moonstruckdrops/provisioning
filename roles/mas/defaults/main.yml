@@ -1,0 +1,9 @@
+appstore_id: your_appstore_id
+appstore_password: your_appstore_password
+
+applications:
+  - { name: 'Microsoft Remote Desktop', store_hash: 715768417 }
+  - { name: 'LINE', store_hash: 539883307 }
+  - { name: 'Keynote', store_hash: 409183694 }
+  - { name: 'SoraAnnai', store_hash: 599799247 }
+  - { name: 'Numbers', store_hash: 409203825 }
