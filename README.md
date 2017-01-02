@@ -7,5 +7,7 @@ $ curl -LSfs -o /tmp/master.zip https://github.com/moonstruckdrops/provisioning/
 $ cd /tmp
 $ unzip master.zip
 $ cd provisioning-master
-$ bash -e setup.sh
+$ touch .vault_pass
+$ vi .vault_pass
+$ bash setup.sh
 ```
