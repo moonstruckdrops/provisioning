@@ -1,0 +1,6 @@
+---
+- name: install package
+  become: no
+  pip:
+    name: "{{ item }}"
+  with_items: "packages"
