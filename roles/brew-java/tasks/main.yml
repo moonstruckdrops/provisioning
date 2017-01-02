@@ -1,0 +1,8 @@
+---
+- name: install packages
+  become: false
+  homebrew:
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default('latest') }}"
+    install_options: "{{ item.option | default('') }}"
+  with_items: "{{ packages }}"

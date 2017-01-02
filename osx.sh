@@ -14,6 +14,7 @@ function install_xcode() {
         # xcodeのcommand line toolsのインストール
         xcode-select --install
         softwareupdate -i CommandLineTools
+        xcodebuild -license
     fi
 }
 

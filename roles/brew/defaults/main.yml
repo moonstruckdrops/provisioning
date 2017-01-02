@@ -63,13 +63,6 @@ packages:
   - { name: percona-toolkit, state: 'latest', option: '' }
   - { name: sqlite, state: 'latest', option: '' }
   - { name: postgresql, state: 'latest', option: '' }
-  - { name: tomcat, state: 'latest', option: '' }
-  - { name: ant, state: 'latest', option: '' }
-  - { name: ivy, state: 'latest', option: '' }
-  - { name: maven, state: 'latest', option: '' }
-  - { name: solr, state: 'latest', option: '' }
-  - { name: elasticsearch, state: 'latest', option: '' }
-  - { name: groovyserv, state: 'latest', option: '' }
-  - { name: android-sdk, state: 'latest', option: '' }
+  - { name: mas, state: 'latest', option: '' }
   - { name: awscli, state: 'latest', option: '' }
   - { name: heroku-toolbelt, state: 'latest', option: '' }

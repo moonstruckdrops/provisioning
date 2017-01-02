@@ -1,0 +1,10 @@
+---
+packages:
+  - { name: tomcat, state: 'latest', option: '' }
+  - { name: ant, state: 'latest', option: '' }
+  - { name: ivy, state: 'latest', option: '' }
+  - { name: maven, state: 'latest', option: '' }
+  - { name: solr, state: 'latest', option: '' }
+  - { name: elasticsearch, state: 'latest', option: '' }
+  - { name: groovyserv, state: 'latest', option: '' }
+  - { name: android-sdk, state: 'latest', option: '' }

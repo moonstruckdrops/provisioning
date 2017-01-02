@@ -3,4 +3,5 @@
   become: no
   pip:
     name: "{{ item }}"
-  with_items: "packages"
+    executable: /usr/local/bin/pip
+  with_items: "{{ packages }}"

@@ -28,7 +28,6 @@ packages:
   - { name: mysqlworkbench, state: 'present' }
   - { name: dash, state: 'present' }
   - { name: java, state: 'present' }
-  - { name: memoryanalyzer, state: 'present' }
   - { name: eclipse-ide, state: 'present' }
   - { name: intellij-idea, state: 'present' }
   - { name: rubymine, state: 'present' }
