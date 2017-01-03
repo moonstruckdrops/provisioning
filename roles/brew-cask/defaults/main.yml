@@ -1,7 +1,6 @@
 packages:
   - { name: alfred, state: 'present' }
   - { name: google-japanese-ime, state: 'present' }
-  - { name: 1password, state: 'present' }
   - { name: appcleaner, state: 'present' }
   - { name: yujitach-menumeters, state: 'present' }
   - { name: thunderbird, state: 'present' }

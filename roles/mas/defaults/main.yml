@@ -7,3 +7,4 @@ applications:
   - { name: 'Keynote', store_hash: 409183694 }
   - { name: 'SoraAnnai', store_hash: 599799247 }
   - { name: 'Numbers', store_hash: 409203825 }
+  - { name: '1Password', store_hash: 443987910 }
