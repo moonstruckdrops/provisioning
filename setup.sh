@@ -30,6 +30,8 @@ function provisioning() {
         setup_linux
     else
         ansible-playbook osx.yml --connection=local --vault-password-file .vault_pass --extra-vars=@vault.yml
+        brew linkapps
+        brew cleanup
     fi
 }
 
