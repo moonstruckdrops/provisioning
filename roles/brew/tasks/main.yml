@@ -19,9 +19,14 @@
     install_options: "{{ item.option | default('') }}"
   with_items: "{{ packages }}"
 
+- name: append login shell
+  become: yes
+  shell: >
+    sh -c "echo '/usr/local/bin/bash' >> /etc/shells"
+
 - name: change login shell
   shell: >
-    chpass -s {{which_zsh.stdout}}
+    chsh -s /usr/local/bin/bash
   register: result
   until: result.rc == 0
   retries: 3

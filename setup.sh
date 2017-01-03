@@ -29,7 +29,7 @@ function provisioning() {
     if [ `echo "${OSTYPE}" |grep "linux*"` ]; then
         setup_linux
     else
-        ansible-playbook osx.yml --connection=local --vault-password-file .vault_pass --extra-vars=@vault.yml
+        ansible-playbook osx.yml --connection=local --vault-password-file .vault_pass --extra-vars=@vault.yml --ask-become-pass
         brew linkapps
         brew cleanup
     fi

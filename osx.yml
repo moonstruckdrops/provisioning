@@ -1,7 +1,6 @@
 ---
 - name: OSX Provisioner
   hosts: local
-  become: false
   gather_facts: yes
   roles:
     - brew
