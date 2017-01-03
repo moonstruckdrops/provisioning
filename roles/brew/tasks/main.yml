@@ -19,10 +19,15 @@
     install_options: "{{ item.option | default('') }}"
   with_items: "{{ packages }}"
 
+- name: check if login shell appended
+  shell: cat /etc/shells |grep /usr/local/bin/bash
+  register: is_login_shell_appended
+
 - name: append login shell
   become: yes
   shell: >
     sh -c "echo '/usr/local/bin/bash' >> /etc/shells"
+  when: is_login_shell_appended.rc != 0
 
 - name: change login shell
   shell: >
@@ -30,3 +35,4 @@
   register: result
   until: result.rc == 0
   retries: 3
+  when: is_login_shell_appended.rc != 0
