@@ -18,3 +18,10 @@
     state: "{{ item.state | default('latest') }}"
     install_options: "{{ item.option | default('') }}"
   with_items: "{{ packages }}"
+
+- name: change login shell
+  shell: >
+    chpass -s {{which_zsh.stdout}}
+  register: result
+  until: result.rc == 0
+  retries: 3
