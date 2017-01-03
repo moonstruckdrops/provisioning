@@ -18,6 +18,7 @@ packages:
   - { name: vagrant, state: 'present' }
   - { name: vagrant-manager, state: 'present' }
   - { name: genymotion, state: 'present' }
+  - { name: emacs, state: 'present' }
   - { name: sublime-text, state: 'present' }
   - { name: atom, state: 'present' }
   - { name: iterm2, state: 'present' }

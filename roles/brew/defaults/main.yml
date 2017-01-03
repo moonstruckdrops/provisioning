@@ -17,7 +17,6 @@ packages:
   - { name: gibo, state: 'latest', option: '' }
   - { name: tig, state: 'latest', option: '' }
   - { name: subversion, state: 'latest', option: '' }
-  - { name: emacs, state: 'latest', option: '--srgb --with-gnutls' }
   - { name: rbenv, state: 'latest', option: '' }
   - { name: ruby-build, state: 'latest', option: '--with-openssl' }
   - { name: rbenv-binstubs, state: 'latest', option: '' }
