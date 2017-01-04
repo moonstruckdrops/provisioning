@@ -49,4 +49,5 @@ packages:
   - { name: carbon-copy-cloner, state: 'present' }
   - { name: silverlight, state: 'present' }
   - { name: charles, state: 'present' }
+  - { name: seashore, state: 'present' }
 

@@ -65,3 +65,14 @@ packages:
   - { name: mas, state: 'latest', option: '' }
   - { name: awscli, state: 'latest', option: '' }
   - { name: heroku-toolbelt, state: 'latest', option: '' }
+  - { name: graphviz, state: 'latest', option: '' }
+  - { name: hub, state: 'latest', option: '' }
+  - { name: mercurial, state: 'latest', option: '' }
+  - { name: packer, state: 'latest', option: '' }
+  - { name: redis, state: 'latest', option: '' }
+  - { name: rlwrap, state: 'latest', option: '' }
+  - { name: xz, state: 'latest', option: '' }
+  - { name: socat, state: 'latest', option: '' }
+  - { name: w3m, state: 'latest', option: '' }
+  - { name: lha, state: 'latest', option: '' }
+  - { name: tofrodos, state: 'latest', option: '' }
