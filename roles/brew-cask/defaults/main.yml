@@ -50,4 +50,4 @@ packages:
   - { name: silverlight, state: 'present' }
   - { name: charles, state: 'present' }
   - { name: seashore, state: 'present' }
-
+  - { name: google-cloud-sdk, state: 'present' }
