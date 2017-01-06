@@ -39,6 +39,7 @@ function setup_osx() {
     notify_osx "start osx setup"
     install_xcode
     install_homebrew
+    notify_osx "input password"
     install_ansible
     provisioning
     notify_osx "finish osx setup"

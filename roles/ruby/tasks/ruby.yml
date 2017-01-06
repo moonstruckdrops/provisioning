@@ -4,7 +4,6 @@
   register: ruby_installed
   changed_when: false
   ignore_errors: true
-  always_run: true
 
 - name: install ruby
   shell: bash -lc "export MAKE_OPTS=-j2 && rbenv install {{ ruby_version }}"
@@ -15,7 +14,6 @@
   register: ruby_global_version
   changed_when: false
   failed_when: false
-  always_run: true
 
 - name: rbenv global
   shell: bash -lc "rbenv global {{ ruby_version }}"
@@ -25,6 +23,6 @@
   gem:
     name: "{{ item.name }}"
     version: "{{ item.version | default(omit) }}"
-    executable: /usr/local/rbenv/shims/gem
+    executable: "{{ ruby_rbenv_shims_path }}/gem"
     state: present
   with_items: "{{ ruby_gems }}"

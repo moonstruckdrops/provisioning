@@ -5,3 +5,4 @@ ruby_gems:
   - { name: 'rake', version: '12.0.0' }
   - { name: 'pry', version: '0.10.4' }
 ruby_rbenv_path: /usr/local/rbenv
+ruby_rbenv_shims_path: /usr/local/rbenv/shims
