@@ -2,6 +2,7 @@
 - name: check rbenv.sh
   stat: path=/etc/profile.d/rbenv.sh
   register: rbenv_sh
+  when: ansible_distribution != 'MacOSX'
 
 - block:
   - name: install rbenv
@@ -24,4 +25,4 @@
       src: rbenv.sh.j2
       dest: /etc/profile.d/rbenv.sh
       mode: 0775
-  when: not rbenv_sh.stat.exists and ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux' or ansible_distribution == 'Amazon'
+  when: not rbenv_sh.stat.exists and ansible_distribution != 'MacOSX'
