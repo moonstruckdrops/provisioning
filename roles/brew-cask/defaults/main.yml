@@ -51,3 +51,7 @@ packages:
   - { name: charles, state: 'present' }
   - { name: seashore, state: 'present' }
   - { name: google-cloud-sdk, state: 'present' }
+  - { name: marp, state: 'present' }
+  - { name: mpeg-streamclip, state: 'present' }
+  - { name: gulp, state: 'present' }
+  - { name: pg-commander, state: 'present' }
