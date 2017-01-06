@@ -1,0 +1,27 @@
+---
+- name: check rbenv.sh
+  stat: path=/etc/profile.d/rbenv.sh
+  register: rbenv_sh
+
+- block:
+  - name: install rbenv
+    git:
+      repo: https://github.com/sstephenson/rbenv.git
+      dest: "{{ ruby_rbenv_path }}"
+  - name: install ruby-build
+    git:
+      repo: https://github.com/sstephenson/ruby-build.git
+      dest: "{{ ruby_rbenv_path }}/plugins/ruby-build"
+  - name: rbenv directory
+    file:
+      dest: "{{ ruby_rbenv_path }}/{{ item }}"
+      state: directory
+    with_items:
+      - shims
+      - versions
+  - name: rbenv template
+    template:
+      src: rbenv.sh.j2
+      dest: /etc/profile.d/rbenv.sh
+      mode: 0775
+  when: not rbenv_sh.stat.exists and ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux' or ansible_distribution == 'Amazon'
