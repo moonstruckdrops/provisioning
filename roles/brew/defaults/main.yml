@@ -76,3 +76,5 @@ packages:
   - { name: w3m, state: 'latest', option: '' }
   - { name: lha, state: 'latest', option: '' }
   - { name: tofrodos, state: 'latest', option: '' }
+  - { name: terminal-notifier, state: 'latest', option: '' }
+  - { name: lynx, state: 'latest', option: '' }
