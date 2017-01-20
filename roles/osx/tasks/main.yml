@@ -1,0 +1,10 @@
+---
+- name: finder sound off
+  become: yes
+  shell: >
+    sh -c "defaults write com.apple.finder FinderSounds -bool no"
+
+- name: function keys default
+  become: yes
+  shell: >
+    sh -c "defaults read com.apple.touchbar.agent PresentationModeGlobal functionKeys"

@@ -3,7 +3,14 @@
   hosts: local
   gather_facts: yes
   roles:
+    - brew
+    - brew-cask
+    - brew-java
+    - mas
+    - python
+    - groovy
     - ruby
+    - osx
   vars:
     ruby_rbenv_path: /usr/local/var/rbenv/version
     ruby_rbenv_shims_path: /usr/local/var/rbenv/shims
