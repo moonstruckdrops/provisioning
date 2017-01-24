@@ -78,3 +78,4 @@ packages:
   - { name: tofrodos, state: 'latest', option: '' }
   - { name: terminal-notifier, state: 'latest', option: '' }
   - { name: lynx, state: 'latest', option: '' }
+  - { name: qt5, state: 'latest', option: '' }
