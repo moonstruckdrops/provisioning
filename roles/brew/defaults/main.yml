@@ -79,3 +79,4 @@ packages:
   - { name: terminal-notifier, state: 'latest', option: '' }
   - { name: lynx, state: 'latest', option: '' }
   - { name: qt5, state: 'latest', option: '' }
+  - { name: p7zip, state: 'latest', option: '' }
