@@ -13,6 +13,13 @@ function install_ansible() {
             sudo easy_install pip
         fi
 
+        sudo pip install --upgrade pip
+        sudo pip install --upgrade setuptools
+        sudo dnf install -y gcc
+        sudo dnf install -y openssl-devel
+        sudo dnf install -y python-devel
+        sudo dnf install -y rpm-build
+
         which ansible >/dev/null 2>&1
         if [ $? -ne 0 ]; then
             echo "not found command ansible"
