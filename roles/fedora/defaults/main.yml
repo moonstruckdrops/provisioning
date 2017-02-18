@@ -12,7 +12,7 @@ packages:
   - { name: jq, state: 'latest' }
   - { name: vlc, state: 'latest' }
   - { name: bash, state: 'latest' }
-  - { name: bash-completions, state: 'latest' }
+  - { name: bash-completion, state: 'latest' }
   - { name: docker, state: 'latest' }
   - { name: docker-compose, state: 'latest' }
   # system
