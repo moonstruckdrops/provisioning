@@ -4,6 +4,7 @@ packages:
   - { name: git, state: 'latest' }
   - { name: emacs, state: 'latest' }
   - { name: nano, state: 'latest' }
+  - { name: wget, state: 'latest' }
   - { name: gcc, state: 'latest' }
   - { name: autoconf, state: 'latest' }
   - { name: automake, state: 'latest' }
