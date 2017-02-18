@@ -56,6 +56,7 @@ function setup_osx() {
 function setup_linux() {
     install_ansible
     provisioning
+    LANG=C xdg-user-dirs-gtk-update
 }
 
 function _main() {
