@@ -10,7 +10,8 @@ packages:
   - { name: rpm-build, state: 'latest' }
   - { name: python-dnf, state: 'latest' }
   - { name: jq, state: 'latest' }
-  - { name: vlc, state: 'latest' }
+  # other repositories
+  # - { name: vlc, state: 'latest' }
   - { name: bash, state: 'latest' }
   - { name: bash-completion, state: 'latest' }
   - { name: docker, state: 'latest' }

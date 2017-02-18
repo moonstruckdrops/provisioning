@@ -8,7 +8,7 @@
   when: ansible_distribution == 'MacOSX'
 
 - name: install package(Linux)
-  become: no
+  become: yes
   pip:
     name: "{{ item }}"
     executable: /usr/bin/pip
