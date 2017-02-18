@@ -27,7 +27,7 @@ function install_ansible() {
 
 function provisioning() {
     if [ `echo "${OSTYPE}" |grep "linux*"` ]; then
-        setup_linux
+        ansible-playbook linux.yml --connection=local --vault-password-file .vault_pass --extra-vars=@vault.yml --ask-become-pass
     else
         ansible-playbook osx.yml --connection=local --vault-password-file .vault_pass --extra-vars=@vault.yml --ask-become-pass
         brew linkapps
@@ -46,8 +46,6 @@ function setup_osx() {
 }
 
 function setup_linux() {
-    # TODO: Linuxのセットアップで必須な内容はあればここに書く
-    echo "do nothing."
     install_ansible
     provisioning
 }

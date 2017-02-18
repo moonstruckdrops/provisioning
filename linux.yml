@@ -1,0 +1,7 @@
+---
+- name: Linux Provisioner
+  hosts: local
+  gather_facts: yes
+  roles:
+    - fedora
+    - ruby
