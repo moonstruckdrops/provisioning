@@ -5,6 +5,8 @@ packages:
   - { name: emacs, state: 'latest' }
   - { name: nano, state: 'latest' }
   - { name: gcc, state: 'latest' }
+  - { name: autoconf, state: 'latest' }
+  - { name: automake, state: 'latest' }
   - { name: jq, state: 'latest' }
   - { name: vlc, state: 'latest' }
   - { name: bash, state: 'latest' }
@@ -28,6 +30,7 @@ packages:
   - { name: zlib-devel, state: 'latest' }
   - { name: libcurl-devel, state: 'latest' }
   - { name: libffi-devel, state: 'latest' }
+  - { name: ImageMagick-devel, state: 'latest' }
   - { name: java-1.8.0-openjdk-devel, state: 'latest' }
   # other
   - { name: evince, state: 'latest' }
