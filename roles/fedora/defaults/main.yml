@@ -7,6 +7,10 @@ packages:
   - { name: gcc, state: 'latest' }
   - { name: autoconf, state: 'latest' }
   - { name: automake, state: 'latest' }
+  - { name: libz.so.1, state: 'latest' }
+  - { name: ld-linux.so.2, state: 'latest' }
+  - { name: libstdc++, state: 'latest' }
+  - { name: libXrender, state: 'latest' }
   - { name: rpm-build, state: 'latest' }
   - { name: python-dnf, state: 'latest' }
   - { name: jq, state: 'latest' }
@@ -31,11 +35,16 @@ packages:
   - { name: openssl-devel, state: 'latest' }
   - { name: readline-devel, state: 'latest' }
   - { name: zlib-devel, state: 'latest' }
+  - { name: glibc-devel, state: 'latest' }
+  - { name: ncurses-devel, state: 'latest' }
   - { name: python-devel, state: 'latest' }
   - { name: libcurl-devel, state: 'latest' }
   - { name: libffi-devel, state: 'latest' }
+  - { name: libX11-devel, state: 'latest' }  
   - { name: ImageMagick-devel, state: 'latest' }
   - { name: java-1.8.0-openjdk-devel, state: 'latest' }
   # other
   - { name: evince, state: 'latest' }
   - { name: gimp, state: 'latest' }
+
+
