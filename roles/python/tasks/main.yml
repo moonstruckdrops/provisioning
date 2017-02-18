@@ -1,7 +1,17 @@
 ---
-- name: install package
+- name: install package(MacOSX)
   become: no
   pip:
     name: "{{ item }}"
     executable: /usr/local/bin/pip
   with_items: "{{ packages }}"
+  when: ansible_distribution == 'MacOSX'
+
+- name: install package(Linux)
+  become: no
+  pip:
+    name: "{{ item }}"
+    executable: /usr/bin/pip
+  with_items: "{{ packages }}"
+  when: ansible_distribution != 'MacOSX'
+
