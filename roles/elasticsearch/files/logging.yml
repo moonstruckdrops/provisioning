@@ -1,0 +1,70 @@
+es.logger.level: DEBUG
+rootLogger: ${es.logger.level}, console, file
+logger:
+  action: DEBUG
+  deprecation: INFO, deprecation_log_file
+  com.amazonaws: WARN
+  com.amazonaws.jmx.SdkMBeanRegistrySupport: ERROR
+  com.amazonaws.metrics.AwsSdkMetrics: ERROR
+  org.apache.http: DEBUG
+
+  # gateway
+  #gateway: DEBUG
+  #index.gateway: DEBUG
+
+  # peer shard recovery
+  #indices.recovery: DEBUG
+
+  # discovery
+  #discovery: TRACE
+
+  index.search.slowlog: TRACE, index_search_slow_log_file
+  index.indexing.slowlog: TRACE, index_indexing_slow_log_file
+
+additivity:
+  index.search.slowlog: false
+  index.indexing.slowlog: false
+  deprecation: false
+
+appender:
+  console:
+    type: console
+    layout:
+      type: consolePattern
+      conversionPattern: "[%d{ISO8601}][%-5p][%-25c] %m%n"
+
+  file:
+    type: extrasRollingFile
+    file: ${path.logs}/elasticsearch.log
+    rollingPolicy: timeBased
+    rollingPolicy.FileNamePattern: ${path.logs}/elasticsearch.log.%d{yyyyMMdd}.gz
+    layout:
+      type: pattern
+      conversionPattern: "[%d{ISO8601}][%-5p][%-25c] %.10000m%n"
+
+  deprecation_log_file:
+    type: extrasRollingFile
+    file: ${path.logs}/deprecation.log
+    rollingPolicy: timeBased
+    rollingPolicy.FileNamePattern: ${path.logs}/deprecation.log.%d{yyyyMMdd}.gz
+    layout:
+      type: pattern
+      conversionPattern: "[%d{ISO8601}][%-5p][%-25c] %m%n"
+
+  index_search_slow_log_file:
+    type: extrasRollingFile
+    file: ${path.logs}/index_search_slowlog.log
+    rollingPolicy: timeBased
+    rollingPolicy.FileNamePattern: ${path.logs}/index_search_slowlog.log.%d{yyyyMMdd}.gz
+    layout:
+      type: pattern
+      conversionPattern: "[%d{ISO8601}][%-5p][%-25c] %m%n"
+
+  index_indexing_slow_log_file:
+    type: extrasRollingFile
+    file: ${path.logs}/index_indexing_slowlog.log
+    rollingPolicy: timeBased
+    rollingPolicy.FileNamePattern: ${path.logs}/index_indexing_slowlog.log.%d{yyyyMMdd}.gz
+    layout:
+      type: pattern
+      conversionPattern: "[%d{ISO8601}][%-5p][%-25c] %m%n"

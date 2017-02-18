@@ -1,0 +1,20 @@
+---
+- name: daemon reload
+  become: yes
+  shell: "systemctl daemon-reload"
+
+- name: daemon enable elasticsearch
+  become: yes
+  shell: "systemctl enable elasticsearch"
+
+- name: daemon enable kibana
+  become: yes
+  shell: "systemctl enable kibana"
+
+- name: restart elasticsearch
+  become: yes
+  shell: "systemctl restart elasticsearch"
+
+- name: restart kibana
+  become: yes
+  shell: "systemctl restart kibana"

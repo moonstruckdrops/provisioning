@@ -1,0 +1,8 @@
+version: 2.2.0
+cluster_name: moonstruckdrops
+es_heap_size: 4g
+es_direct_size: 2g
+es_gc_log_file: /var/log/elasticsearch/gc.log
+es_java_opts: "-XX:MaxMetaspaceSize=2g -XX:CompressedClassSpaceSize=100m -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=4 -XX:GCLogFileSize=0"
+es_primary_host: "primary host"
+es_replica_host: "replica host"

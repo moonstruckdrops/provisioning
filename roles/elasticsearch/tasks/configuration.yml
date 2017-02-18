@@ -1,0 +1,33 @@
+---
+- name: set envs fir elasticsearch
+  become: yes
+  template:
+    src: elasticsearch.j2
+    dest: /etc/sysconfig/elasticsearch
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart elasticsearch
+
+- name: set elasticsearchserver config
+  become: yes
+  template:
+    src: elasticsearch.yml.j2
+    dest: /etc/elasticsearch/elasticsearch.yml
+    owner: root
+    group: elasticsearch
+    mode: 0750
+  notify:
+    - restart elasticsearch
+
+- name: set logging config
+  become: yes
+  copy:
+    src: logging.yml
+    dest: /etc/elasticsearch/logging.yml
+    owner: root
+    group: elasticsearch
+    mode: 0750
+  notify:
+    - restart elasticsearch

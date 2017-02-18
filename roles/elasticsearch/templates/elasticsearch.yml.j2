@@ -1,0 +1,57 @@
+# ---------------------------------- Cluster -----------------------------------
+#
+  cluster.name: {{ cluster_name }}
+#
+# ------------------------------------ Node ------------------------------------
+#
+  node.name: ${HOSTNAME}
+  node.master: true
+  node.data: true
+#
+# ----------------------------------- Paths ------------------------------------
+#
+  path.data: /var/lib/elasticsearch
+  path.logs: /var/log/elasticsearch
+#
+# ----------------------------------- Memory -----------------------------------
+#
+  bootstrap.mlockall: true
+#
+# ---------------------------------- Network -----------------------------------
+#
+  network.host: 0.0.0.0
+  http.port: 9200
+#
+# ---------------------------------- Gateway -----------------------------------
+#
+# gateway.recover_after_nodes: 3
+#
+# --------------------------------- Discovery ----------------------------------
+#
+  discovery.zen.ping.unicast.hosts: ["{{ es_primary_host }}", "{{ es_replica_host }}"]
+  discovery.zen.minimum_master_nodes: 2
+#
+# ---------------------------------- Various -----------------------------------
+#
+# node.max_local_storage_nodes: 1
+  action.destructive_requires_name: true
+#
+# --------------------------------  Slow Log -----------------------------------
+#
+  index.search.slowlog.threshold.query.warn: 10s
+  index.search.slowlog.threshold.query.info: 5s
+  index.search.slowlog.threshold.query.debug: 2s
+  index.search.slowlog.threshold.query.trace: 500ms
+
+  index.search.slowlog.threshold.fetch.warn: 1s
+  index.search.slowlog.threshold.fetch.info: 800ms
+  index.search.slowlog.threshold.fetch.debug: 500ms
+  index.search.slowlog.threshold.fetch.trace: 200ms
+
+  index.indexing.slowlog.threshold.index.warn: 10s
+  index.indexing.slowlog.threshold.index.info: 5s
+  index.indexing.slowlog.threshold.index.debug: 2s
+  index.indexing.slowlog.threshold.index.trace: 500ms
+  index.indexing.slowlog.level: info
+  index.indexing.slowlog.source: 1000
+  

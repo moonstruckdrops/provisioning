@@ -1,0 +1,42 @@
+---
+- name: GPG key インポート
+  become: yes
+  rpm_key:
+    key: https://packages.elastic.co/GPG-KEY-elasticsearch
+
+- name: リポジトリ追加
+  become: yes
+  copy:
+    src: elasticsearch.repo
+    dest: /etc/yum.repos.d/elasticsearch.repo
+    owner: root
+    group: root
+    mode: 0644
+
+- name: elasticsearchインストール
+  become: yes
+  yum:
+    name: "elasticsearch-{{ version }}"
+    state: latest
+
+- name: pidの確認
+  stat:
+    path: /var/run/elasticsearch/elasticsearch.pid
+  changed_when: false
+  always_run: yes
+  ignore_errors: yes
+  register: es_pid
+
+- name: gcログファイルの確認
+  become: yes
+  shell: "find /var/log/elasticsearch -name \"*gc.log*\""
+  changed_when: false
+  always_run: yes
+  ignore_errors: yes
+  register: gc_log_files
+
+- name: gcログファイルのローテート
+  become: yes
+  become_user: elasticsearch
+  shell: "/usr/bin/jcmd `cat /var/run/elasticsearch/elasticsearch.pid` GC.rotate_log"
+  when: es_pid.stat.exists == true and gc_log_files.rc == 0
