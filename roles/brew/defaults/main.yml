@@ -80,3 +80,4 @@ packages:
   - { name: lynx, state: 'latest', option: '' }
   - { name: qt5, state: 'latest', option: '' }
   - { name: p7zip, state: 'latest', option: '' }
+  - { name: android-sdk, state: 'latest', option: '' }
