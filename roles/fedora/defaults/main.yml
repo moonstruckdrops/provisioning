@@ -7,6 +7,8 @@ packages:
   - { name: gcc, state: 'latest' }
   - { name: autoconf, state: 'latest' }
   - { name: automake, state: 'latest' }
+  - { name: rpm-build, state: 'latest' }
+  - { name: python-dnf, state: 'latest' }
   - { name: jq, state: 'latest' }
   - { name: vlc, state: 'latest' }
   - { name: bash, state: 'latest' }
@@ -28,6 +30,7 @@ packages:
   - { name: openssl-devel, state: 'latest' }
   - { name: readline-devel, state: 'latest' }
   - { name: zlib-devel, state: 'latest' }
+  - { name: python-devel, state: 'latest' }
   - { name: libcurl-devel, state: 'latest' }
   - { name: libffi-devel, state: 'latest' }
   - { name: ImageMagick-devel, state: 'latest' }
