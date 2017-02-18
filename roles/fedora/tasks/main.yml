@@ -10,3 +10,13 @@
   dnf:
     name: '@Development tools'
     state: present
+
+- name: base packages
+  become: yes
+  dnf:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - git
+    - htop
+    - readline-devel

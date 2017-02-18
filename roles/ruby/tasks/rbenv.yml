@@ -7,14 +7,17 @@
 
 - block:
   - name: install rbenv
+    become: yes
     git:
       repo: https://github.com/sstephenson/rbenv.git
       dest: "{{ ruby_rbenv_path }}"
   - name: install ruby-build
+    become: yes
     git:
       repo: https://github.com/sstephenson/ruby-build.git
       dest: "{{ ruby_rbenv_path }}/plugins/ruby-build"
   - name: rbenv directory
+    become: yes
     file:
       dest: "{{ ruby_rbenv_path }}/{{ item }}"
       state: directory
@@ -22,6 +25,7 @@
       - shims
       - versions
   - name: rbenv template
+    become: yes
     template:
       src: rbenv.sh.j2
       dest: /etc/profile.d/rbenv.sh
