@@ -19,6 +19,7 @@ function install_ansible() {
         sudo dnf install -y openssl-devel
         sudo dnf install -y python-devel
         sudo dnf install -y rpm-build
+        sudo dnf install -y python-dnf
 
         which ansible >/dev/null 2>&1
         if [ $? -ne 0 ]; then

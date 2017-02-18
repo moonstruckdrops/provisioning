@@ -1,11 +1,12 @@
 ---
 - name: upgrade all packages
+  become: yes
   dnf:
     name: "*"
     state: latest
 
 - name: install the 'Development tools' package group
+  become: yes
   dnf:
     name: '@Development tools'
     state: present
-
