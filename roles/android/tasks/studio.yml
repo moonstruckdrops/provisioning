@@ -1,0 +1,25 @@
+---
+- name: check android studio
+  become: yes
+  stat:
+    path: /opt/android-sdk/tools/android
+  register: android_studio_installed
+  changed_when: false
+  ignore_errors: yes
+
+- name: download android studio
+  get_url:
+    url: https://dl.google.com/dl/android/studio/ide-zips/2.2.3.0/android-studio-ide-145.3537739-linux.zip
+    dest: /tmp/android-studio-ide-145.3537739-linux.zip
+    mode: 0440
+  when: not android_studio_installed.stat.exists
+
+- name: unarchive
+  become: yes
+  shell: 'cd /tmp && unzip android-studio-ide-145.3537739-linux.zip'
+  when: not android_studio_installed.stat.exists
+
+- name: move studio directory
+  become: yes
+  shell: 'mv /tmp/android-studio /opt/android-studio'
+  when: not android_studio_installed.stat.exists

@@ -1,0 +1,54 @@
+---
+- name: check android sdk
+  become: yes
+  stat:
+    path: /opt/android-sdk/tools/android
+  register: android_installed
+  changed_when: false
+  ignore_errors: yes
+
+- name: download android sdk
+  get_url:
+    url: http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
+    dest: /tmp/android-sdk_r24.4.1-linux.tgz
+    mode: 0440
+  when: not android_installed.stat.exists
+
+- name: unarchive
+  become: yes
+  shell: 'cd /tmp && tar xvf android-sdk_r24.4.1-linux.tgz'
+  when: not android_installed.stat.exists
+
+- name: move sdk directory
+  become: yes
+  shell: 'mv /tmp/android-sdk-linux /opt/android-sdk'
+  when: not android_installed.stat.exists
+
+- name: set envs for android sdk
+  become: yes
+  copy:
+    src: android.sh
+    dest: /etc/profile.d/android.sh
+    owner: root
+    group: root
+    mode: 0644
+  when: not android_installed.stat.exists
+
+# item list
+# android list sdk --extended
+- name: Install Android SDK
+  become: yes
+  shell: echo y | /opt/android-sdk/tools/android update sdk -u -a -t "{{ item }}"
+  with_items:
+    - tools
+    - platform-tools
+    - build-tools-25.0.2
+    - android-24
+    - android-23
+    - android-22
+    - android-21
+    - extra-google-google_play_services
+    - extra-android-m2repository
+    - extra-google-m2repository
+    - addon-google_apis-google-24
+  when: not android_installed.stat.exists
