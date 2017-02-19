@@ -1,7 +1,8 @@
 ---
 - name: check android sdk
   become: yes
-  shell: /opt/android-sdk/tools/android | grep android
+  stat:
+    path: /opt/android-sdk/tools/android
   register: android_installed
   changed_when: false
   ignore_errors: yes
@@ -11,7 +12,7 @@
     url: http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
     dest: /tmp/android-sdk_r24.4.1-linux.tgz
     mode: 0440
-  when: android_installed.rc != 0
+  when: android_installed.stat.exists
 
 - name: unarchive
   become: yes
@@ -21,7 +22,7 @@
 - name: move sdk directory
   become: yes
   shell: 'mv /tmp/android-sdk-linux /opt/android-sdk'
-  when: android_installed.rc != 0
+  when: android_installed.stat.exists
 
 - name: set envs for android sdk
   become: yes
@@ -31,6 +32,7 @@
     owner: root
     group: root
     mode: 0644
+  when: android_installed.stat.exists
 
 # item list
 # android list sdk --extended
@@ -49,3 +51,4 @@
     - extra-android-m2repository
     - extra-google-m2repository
     - addon-google_apis-google-24
+  when: android_installed.stat.exists
