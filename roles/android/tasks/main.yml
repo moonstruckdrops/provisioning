@@ -35,7 +35,8 @@
 # item list
 # android list sdk --extended
 - name: Install Android SDK
-  shell: echo y | android update sdk -u -a -t "{{ item }}"
+  become: yes
+  shell: echo y | /opt/android-sdk/tools/android update sdk -u -a -t "{{ item }}"
   with_items:
     - tools
     - platform-tools
