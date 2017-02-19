@@ -47,5 +47,5 @@ packages:
   # other
   - { name: evince, state: 'latest' }
   - { name: gimp, state: 'latest' }
-
+  - { name: conky, state: 'latest' }
 

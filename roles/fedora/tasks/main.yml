@@ -17,3 +17,38 @@
     name: "{{ item.name | default(item) }}"
     state: "{{ item.state | default('latest') }}"
   with_items: "{{ packages }}"
+
+
+- name: add atlassian repository
+  become: yes
+  copy:
+    src: atlassian-artifactory.repo
+    dest: /etc/yum.repos.d/elasticsearch.repo
+    owner: root
+    group: root
+    mode: 0644
+
+- name: install hipchat
+  become: yes
+  dnf:
+    name: hipchat4
+    state: latest
+    enablerepo: atlassian-artifactory
+
+
+- name: add Google chrome repo
+  become: yes
+  copy: 
+    src: google-chrome.repo
+    dest: /etc/yum.repos.d/google-chrome.repo
+    owner: root
+    group: root
+    mode: 0644
+
+- name: install Google chrome
+  become: yes
+  dnf: 
+    name: google-chrome-stable
+    state: latest
+    enablerepo: google-chrome
+
