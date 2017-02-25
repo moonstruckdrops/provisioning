@@ -35,10 +35,9 @@
     state: latest
     enablerepo: atlassian-artifactory
 
-
 - name: add Google chrome repo
   become: yes
-  copy: 
+  copy:
     src: google-chrome.repo
     dest: /etc/yum.repos.d/google-chrome.repo
     owner: root
@@ -47,8 +46,23 @@
 
 - name: install Google chrome
   become: yes
-  dnf: 
+  dnf:
     name: google-chrome-stable
     state: latest
     enablerepo: google-chrome
 
+- name: add MySQL repo
+  become: yes
+  copy:
+    src: mysql-community.repo
+    dest: /etc/yum.repos.d/mysql-community.repo
+    owner: root
+    group: root
+    mode: 0644
+
+- name: install mysql56-devel
+  become: yes
+  dnf:
+    name: mysql-community-devel
+    state: latest
+    enablerepo: mysql56-community

@@ -27,5 +27,10 @@
     name: "{{ item.name }}"
     version: "{{ item.version | default(omit) }}"
     executable: "{{ ruby_rbenv_shims_path }}/gem"
+    user_install: false
     state: present
   with_items: "{{ ruby_gems }}"
+
+- name: rbenv rehash
+  become: yes
+  shell: bash -lc "rbenv rehash"
