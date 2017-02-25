@@ -2,7 +2,7 @@
 - name: check android studio
   become: yes
   stat:
-    path: /opt/android-sdk/tools/android
+    path: /opt/android-studio
   register: android_studio_installed
   changed_when: false
   ignore_errors: yes
