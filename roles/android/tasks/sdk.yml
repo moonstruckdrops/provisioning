@@ -52,3 +52,11 @@
     - extra-google-m2repository
     - addon-google_apis-google-24
   when: not android_installed.stat.exists
+
+- name: set permissions
+  become: yes
+  file:
+    path: /opt/android-sdk
+    state: directory
+    owner: moonstruckdrops
+    group: moonstruckdrops

@@ -18,7 +18,6 @@
     state: "{{ item.state | default('latest') }}"
   with_items: "{{ packages }}"
 
-
 - name: add atlassian repository
   become: yes
   copy:
@@ -66,3 +65,9 @@
     name: mysql-community-devel
     state: latest
     enablerepo: mysql56-community
+
+- name: install slack
+  become: yes
+  dnf:
+    name: https://downloads.slack-edge.com/linux_releases/slack-2.4.2-0.1.fc21.x86_64.rpm
+    state: latest

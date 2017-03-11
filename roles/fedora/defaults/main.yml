@@ -5,6 +5,7 @@ packages:
   - { name: emacs, state: 'latest' }
   - { name: nano, state: 'latest' }
   - { name: wget, state: 'latest' }
+  - { name: the_silver_searcher, state: 'latest' }
   - { name: gcc, state: 'latest' }
   - { name: autoconf, state: 'latest' }
   - { name: automake, state: 'latest' }
