@@ -20,6 +20,8 @@ packages:
   - { name: rbenv, state: 'latest', option: '' }
   - { name: ruby-build, state: 'latest', option: '--with-openssl' }
   - { name: rbenv-binstubs, state: 'latest', option: '' }
+  - { name: exenv, state: 'latest', option: '' }
+  - { name: elixir-build, state: 'latest', option: '' }
   - { name: go, state: 'latest', option: '--cross-compile-all' }
   - { name: nodebrew, state: 'latest', option: '' }
   - { name: lua, state: 'latest', option: '' }

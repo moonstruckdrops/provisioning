@@ -55,3 +55,4 @@ packages:
   - { name: mpeg-streamclip, state: 'present' }
   - { name: gulp, state: 'present' }
   - { name: pg-commander, state: 'present' }
+  - { name: android-sdk, state: 'latest' }

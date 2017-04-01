@@ -7,4 +7,4 @@ packages:
   - { name: solr, state: 'latest', option: '' }
   - { name: elasticsearch, state: 'latest', option: '' }
   - { name: groovyserv, state: 'latest', option: '' }
-  - { name: android-sdk, state: 'latest', option: '' }
+  - { name: jsonschema2pojo, state: 'latest', option: '' }
