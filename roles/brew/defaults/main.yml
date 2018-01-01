@@ -1,6 +1,7 @@
 ---
 repositories:
   - caskroom/cask
+  - caskroom/drivers
   - homebrew/versions
   - homebrew/binary
   - homebrew/completions
@@ -56,10 +57,9 @@ packages:
   - { name: imagemagick, state: 'latest', option: '' }
   - { name: peco, state: 'latest', option: '' }
   - { name: percol, state: 'latest', option: '' }
-  - { name: docker, state: 'latest', option: '--without-completions' }
-  - { name: boot2docker, state: 'latest', option: '' }
   - { name: mysql56, state: 'latest', option: '--with-blackhole-storage-engine' }
-  - { name: mysql-connector-c++, state: 'latest', option: '' }
+  - { name: mysql56, state: 'linked', option: '--force' }
+#  - { name: mysql-connector-c++, state: 'latest', option: '' }
   - { name: percona-server, state: 'latest', option: '' }
   - { name: percona-toolkit, state: 'latest', option: '' }
   - { name: sqlite, state: 'latest', option: '' }
@@ -82,3 +82,7 @@ packages:
   - { name: lynx, state: 'latest', option: '' }
   - { name: qt5, state: 'latest', option: '' }
   - { name: p7zip, state: 'latest', option: '' }
+  - { name: erlang, state: 'latest', option: '' }
+  - { name: docker-completion, state: 'latest', option: '' }
+  - { name: docker-compose-completion, state: 'latest', option: '' }
+  - { name: ffmpeg, state: 'latest', option: '' }

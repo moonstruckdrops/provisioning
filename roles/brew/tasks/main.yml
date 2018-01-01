@@ -19,6 +19,9 @@
     install_options: "{{ item.option | default('') }}"
   with_items: "{{ packages }}"
 
+- name: link mysql56
+  shell: brew link --force mysql56
+
 - name: check if login shell appended
   shell: cat /etc/shells |grep /usr/local/bin/bash
   register: is_login_shell_appended

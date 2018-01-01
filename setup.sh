@@ -50,6 +50,10 @@ function setup_osx() {
     notify_osx "input password"
     install_ansible
     provisioning
+
+    mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql56)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+    echo "mysqladmin -u root password \"your password\""
+    echo "mysqladmin -u root -h your hostname password \"your password\""
     notify_osx "finish osx setup"
 }
 

@@ -11,7 +11,8 @@ packages:
   - { name: firefox, state: 'present' }
   - { name: google-chrome, state: 'present' }
   - { name: dropbox, state: 'present' }
-  - { name: google-drive, state: 'present' }
+#  - { name: google-drive, state: 'present' }
+  - { name: google-backup-and-sync, state: 'present' }
   - { name: cyberduck, state: 'present' }
   - { name: virtualbox, state: 'present' }
   - { name: vagrant, state: 'present' }
@@ -56,3 +57,7 @@ packages:
   - { name: gulp, state: 'present' }
   - { name: pg-commander, state: 'present' }
   - { name: android-sdk, state: 'latest' }
+  - { name: docker, state: 'latest' }
+  - { name: vlc, state: 'latest' }
+  - { name: nike-plus-connect, state: 'latest' }
+
