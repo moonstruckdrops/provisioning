@@ -86,3 +86,4 @@ packages:
   - { name: docker-completion, state: 'latest', option: '' }
   - { name: docker-compose-completion, state: 'latest', option: '' }
   - { name: ffmpeg, state: 'latest', option: '' }
+  - { name: awslogs, state: 'latest', option: '' }
