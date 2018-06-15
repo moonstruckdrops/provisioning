@@ -9,5 +9,7 @@ $ unzip master.zip
 $ cd provisioning-master
 $ touch .vault_pass
 $ vi .vault_pass
+$ xcode-select --install
+$ install Homebrew
 $ bash setup.sh
 ```
