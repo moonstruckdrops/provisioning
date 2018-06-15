@@ -38,7 +38,7 @@ function provisioning() {
         ansible-playbook linux.yml --connection=local --vault-password-file .vault_pass --extra-vars=@vault.yml --ask-become-pass
     else
         ansible-playbook osx.yml --connection=local --vault-password-file .vault_pass --extra-vars=@vault.yml --ask-become-pass
-        brew linkapps
+        # brew linkapps
         brew cleanup
     fi
 }
