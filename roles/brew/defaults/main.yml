@@ -86,3 +86,5 @@ packages:
   - { name: docker-compose-completion, state: 'latest', option: '' }
   - { name: ffmpeg, state: 'latest', option: '' }
   - { name: awslogs, state: 'latest', option: '' }
+  - { name: rsync, state: 'latest', option: '' }
+  - { name: jsonschema2pojo, state: 'latest', option: '' }
