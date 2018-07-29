@@ -1,11 +1,9 @@
 ---
 repositories:
   - homebrew/cask
-#  - caskroom/drivers
-#  - homebrew/versions
-#  - homebrew/binary
-#  - homebrew/completions
-#  - homebrew/fuse
+  - caskroom/drivers
+  - caskroom/versions
+  - caskroom/fonts
   - mackerelio/mackerel-agent
 
 packages:
