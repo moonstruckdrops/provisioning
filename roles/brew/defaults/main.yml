@@ -56,8 +56,8 @@ packages:
   - { name: imagemagick, state: 'latest', option: '' }
   - { name: peco, state: 'latest', option: '' }
   - { name: percol, state: 'latest', option: '' }
-  - { name: mysql56, state: 'latest', option: '--with-blackhole-storage-engine' }
-  - { name: mysql56, state: 'linked', option: '--force' }
+#  - { name: mysql56, state: 'latest', option: '--with-blackhole-storage-engine' }
+#  - { name: mysql56, state: 'linked', option: '--force' }
 #  - { name: mysql-connector-c++, state: 'latest', option: '' }
   - { name: percona-server, state: 'latest', option: '' }
   - { name: percona-toolkit, state: 'latest', option: '' }
@@ -86,7 +86,7 @@ packages:
   - { name: docker-compose-completion, state: 'latest', option: '' }
   - { name: ffmpeg, state: 'latest', option: '' }
   - { name: awslogs, state: 'latest', option: '' }
-  - { name: rsync, state: 'latest', option: '' }
+#  - { name: rsync, state: 'latest', option: '' }
   - { name: jsonschema2pojo, state: 'latest', option: '' }
   - { name: axel, state: 'latest', option: '' }
   - { name: markdown, state: 'latest', option: '' }
