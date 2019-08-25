@@ -2,7 +2,7 @@ packages:
   - { name: alfred, state: 'present' }
   - { name: google-japanese-ime, state: 'present' }
   - { name: appcleaner, state: 'present' }
-  - { name: yujitach-menumeters, state: 'present' }
+  - { name: menumeters, state: 'present' }
   - { name: thunderbird, state: 'present' }
   - { name: skype, state: 'present' }
 #  - { name: limechat, state: 'present' }
@@ -34,9 +34,9 @@ packages:
   - { name: rubymine, state: 'present' }
   - { name: android-studio, state: 'present' }
   - { name: xamarin-studio, state: 'present' }
-  - { name: karabiner, state: 'present' }
+  - { name: karabiner-elements, state: 'present' }
   - { name: android-file-transfer, state: 'present' }
-  - { name: cooviewer, state: 'present' }
+#  - { name: cooviewer, state: 'present' }
   - { name: franz, state: 'present' }
   - { name: xld, state: 'present' }
   - { name: ripit, state: 'present' }
