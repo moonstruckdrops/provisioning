@@ -5,8 +5,8 @@ packages:
   - { name: yujitach-menumeters, state: 'present' }
   - { name: thunderbird, state: 'present' }
   - { name: skype, state: 'present' }
-  - { name: limechat, state: 'present' }
-  - { name: hipchat, state: 'present' }
+#  - { name: limechat, state: 'present' }
+#  - { name: hipchat, state: 'present' }
   - { name: slack, state: 'present' }
   - { name: firefox, state: 'present' }
   - { name: google-chrome, state: 'present' }
@@ -54,10 +54,11 @@ packages:
   - { name: google-cloud-sdk, state: 'present' }
   - { name: marp, state: 'present' }
   - { name: mpeg-streamclip, state: 'present' }
-  - { name: gulp, state: 'present' }
+#  - { name: gulp, state: 'present' }
   - { name: pg-commander, state: 'present' }
   - { name: android-sdk, state: 'latest' }
   - { name: docker, state: 'latest' }
   - { name: vlc, state: 'latest' }
+  - { name: tableplus, state: 'latest' }
 #  - { name: nike-plus-connect, state: 'latest' }
 
