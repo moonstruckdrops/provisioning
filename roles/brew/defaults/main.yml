@@ -4,6 +4,7 @@ repositories:
   - homebrew/cask-drivers
   - homebrew/cask-versions
   - homebrew/cask-fonts
+  - heroku/brew
 #  - mackerelio/mackerel-agent
 
 packages:
@@ -93,4 +94,4 @@ packages:
   - { name: jsonschema2pojo, state: 'latest', option: '' }
   - { name: axel, state: 'latest', option: '' }
   - { name: markdown, state: 'latest', option: '' }
-  
+  - { name: heroku, state: 'latest', option: '' }
