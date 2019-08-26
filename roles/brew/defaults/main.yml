@@ -95,3 +95,4 @@ packages:
   - { name: axel, state: 'latest', option: '' }
   - { name: markdown, state: 'latest', option: '' }
   - { name: heroku, state: 'latest', option: '' }
+  - { name: ndenv, state: 'latest', option: '' }
