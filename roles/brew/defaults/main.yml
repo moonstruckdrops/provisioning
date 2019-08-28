@@ -24,7 +24,7 @@ packages:
   - { name: elixir-build, state: 'latest', option: '' }
 #  - { name: go, state: 'latest', option: '--cross-compile-all' }
 #  - { name: nodebrew, state: 'latest', option: '' }
-#  - { name: yarn, state: 'latest', option: '--without-node' }
+  - { name: yarn, state: 'latest', option: '' }
   - { name: lua, state: 'latest', option: '' }
   - { name: bundler-completion, state: 'latest', option: '' }
   - { name: gem-completion, state: 'latest', option: '' }
@@ -95,4 +95,6 @@ packages:
   - { name: axel, state: 'latest', option: '' }
   - { name: markdown, state: 'latest', option: '' }
   - { name: heroku, state: 'latest', option: '' }
-  - { name: ndenv, state: 'latest', option: '' }
+  - { name: nvm, state: 'latest', option: '' }
+  - { name: gnu-sed, state: 'latest', option: '' }
+  - { name: tfenv, state: 'latest', option: '' }
