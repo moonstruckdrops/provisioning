@@ -98,3 +98,4 @@ packages:
   - { name: nvm, state: 'latest', option: '' }
   - { name: gnu-sed, state: 'latest', option: '' }
   - { name: tfenv, state: 'latest', option: '' }
+  - { name: jenv, state: 'latest', option: '' }
