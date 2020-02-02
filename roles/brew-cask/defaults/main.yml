@@ -60,5 +60,6 @@ packages:
   - { name: docker, state: 'latest' }
   - { name: vlc, state: 'latest' }
   - { name: tableplus, state: 'latest' }
+  - { name: session-manager-plugin, state: 'latest' }
 #  - { name: nike-plus-connect, state: 'latest' }
 

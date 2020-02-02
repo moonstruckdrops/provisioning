@@ -5,6 +5,7 @@ repositories:
   - homebrew/cask-versions
   - homebrew/cask-fonts
   - heroku/brew
+  - dart-lang/dart
 #  - mackerelio/mackerel-agent
 
 packages:
@@ -99,3 +100,4 @@ packages:
   - { name: gnu-sed, state: 'latest', option: '' }
   - { name: tfenv, state: 'latest', option: '' }
   - { name: jenv, state: 'latest', option: '' }
+  - { name: dart, state: 'latest', option: '' }
