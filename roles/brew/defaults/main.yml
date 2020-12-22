@@ -4,6 +4,7 @@ repositories:
   - homebrew/cask-drivers
   - homebrew/cask-versions
   - homebrew/cask-fonts
+  - moonstruckdrops/kiex
   - heroku/brew
   - dart-lang/dart
 #  - mackerelio/mackerel-agent
@@ -21,6 +22,7 @@ packages:
   - { name: rbenv, state: 'latest', option: '' }
   - { name: ruby-build, state: 'latest', option: '--with-openssl' }
   - { name: rbenv-binstubs, state: 'latest', option: '' }
+  - { name: kerl, state: 'latest', option: '' }
   - { name: exenv, state: 'latest', option: '' }
   - { name: elixir-build, state: 'latest', option: '' }
 #  - { name: go, state: 'latest', option: '--cross-compile-all' }
@@ -37,8 +39,8 @@ packages:
   - { name: gradle-completion, state: 'latest', option: '' }
   - { name: yarn-completion, state: 'latest', option: '' }  
   - { name: packer-completion, state: 'latest', option: '' }
-  - { name: maven-completion, state: 'latest', option: '' }
-  - { name: spring-completion, state: 'latest', option: '' }
+#  - { name: maven-completion, state: 'latest', option: '' }
+#  - { name: spring-completion, state: 'latest', option: '' }
   - { name: coreutils, state: 'latest', option: '' }
   - { name: source-highlight, state: 'latest', option: '' }
   - { name: tree, state: 'latest', option: '' }
@@ -86,7 +88,7 @@ packages:
   - { name: lynx, state: 'latest', option: '' }
   - { name: qt5, state: 'latest', option: '' }
   - { name: p7zip, state: 'latest', option: '' }
-  - { name: erlang, state: 'latest', option: '' }
+#  - { name: erlang, state: 'latest', option: '' }
   - { name: docker-completion, state: 'latest', option: '' }
   - { name: docker-compose-completion, state: 'latest', option: '' }
   - { name: ffmpeg, state: 'latest', option: '' }
@@ -101,3 +103,4 @@ packages:
   - { name: tfenv, state: 'latest', option: '' }
   - { name: jenv, state: 'latest', option: '' }
   - { name: dart, state: 'latest', option: '' }
+  - { name: unrar, state: 'latest', option: '' }
